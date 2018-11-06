@@ -1,0 +1,25 @@
+﻿---
+title: Git安装
+date: 2018-06-21 00:15:34
+tags: Git
+categories: 工具
+---
+# 下载 [Git工具](https://git-scm.com/downloads "Git")
+
+
+<!-- more -->
+
+![Git](https://upload-images.jianshu.io/upload_images/14481291-f7c07ac15f83cb73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+选择对应的版本下载
+
+# 安装的过程中，可以选择桌面快捷方式
+![Desktop](https://upload-images.jianshu.io/upload_images/14481291-20c990508f643338.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+# 安装后的文件夹
+![文件夹](https://upload-images.jianshu.io/upload_images/14481291-70cbb58c377c1477.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+# 打开git-bash.exe
+![git-bash.exe](https://upload-images.jianshu.io/upload_images/14481291-1c2f67699a2c47cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+# 绑定用户
+```
+$ git config --global user.name "yourname"
+$ git config --global user.email "youremail@xxx.com"
+```

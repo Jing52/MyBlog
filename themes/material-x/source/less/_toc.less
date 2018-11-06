@@ -1,0 +1,92 @@
+.m_widget.toc-wrapper{
+    overflow: auto;
+    border-radius: @border_radius;
+    position: sticky;
+    top: @height_navbar + 1*@gap;
+    .enable-trans();
+    .content{
+        padding: @gap/2 0;
+    }
+    &.active{
+        position: fixed;
+        box-shadow: @boxshadow_card_raised;
+    }
+
+    .header{
+        position: sticky;
+        width: 100%;
+        top: 0;
+    }
+    @media(max-width: @on_phone){
+        position: fixed;
+        width: 100% - 0.5 * @gap;
+        top: @height_navbar + @gap;
+        left: @gap;
+        box-shadow: @boxshadow_card_raised;
+        display: none;
+        &.active{
+            display: block;
+        }
+
+    }
+
+    a {
+        padding-left: 8px;
+        color: fade(@theme_text_main, 60%);
+        font-size: @fontsize_small;
+        display: inline-block;
+        border-left: 4px solid transparent;
+        &:hover{
+            color: fade(@theme_text_main, 100%);
+            border-left: 4px solid @theme_bg_quote;
+        }
+        &:active{
+            border-left: 8px solid @theme_bg_quote;
+        }
+        &.active{
+            color: fade(@theme_text_main, 100%);
+            border-left: 4px solid @theme_bg_quote;
+            background: fade(@theme_bg_quote, 10%);
+        }
+
+    }
+    ol{
+        .toc-item.toc-level-1 {
+            .toc-child a{
+                padding-left: 0.8*@gap;
+                font-weight: normal;
+            }
+        }
+        .toc-item.toc-level-2 {
+            .toc-child a{
+                padding-left: 1.6*@gap;
+                font-weight: normal;
+            }
+        }
+        .toc-item.toc-level-3 {
+            .toc-child a{
+                padding-left: 2.4*@gap;
+                font-weight: normal;
+            }
+        }
+        .toc-item.toc-level-4 {
+            .toc-child a{
+                padding-left: 3.2*@gap;
+                font-weight: normal;
+            }
+        }
+        li{
+            a{
+                padding: 0 @gap/2 0 (@gap - 5px);
+                font-weight: bold;
+                width: 100%;
+
+            }
+            width: auto;
+            // &:extend(.txt-ellipsis);
+        }
+    }
+    &:empty{
+        display:none;
+    }
+}
